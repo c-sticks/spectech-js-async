@@ -1,6 +1,7 @@
 async function asyncFunc() {
   console.log("normalFunction started");
   await fetch("https://delay-api.deno.dev?2s");
+  throw new Error("aaaa");
   console.log("normalFunction finished");
   return 0;
 }
