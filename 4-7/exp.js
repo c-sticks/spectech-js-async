@@ -1,14 +1,17 @@
-async function asyncFunc() {
-  await fetch("https://delay-api.deno.dev?2s");
-  return 0;
+function syncFunc(a, b) {
+  const sum = a + b;
+  const sub = a - b;
+  return sum * sub;
 }
 
-async function main() {
-  console.log("main started");
-  const promise = asyncFunc();
-  console.log("POINT A");
-  await promise;
-  console.log("main finished");
+function main() {
+  const x = 100;
+  const y = 200;
+  const res = syncFunc(x, y);
+  const z = res + 1;
+  console.log(z);
 }
+
+
 
 main();
