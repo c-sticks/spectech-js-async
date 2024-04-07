@@ -4,8 +4,12 @@ async function f() {
 
 // (s: number) => string
 
-function sleep(milliSeconds) {
-  return new Promise((r) => setTimeout(r, milliSeconds));
+async function sleep(milliSeconds) {
+  // const promise = new Promise((r) => setTimeout(r, 3000));
+
+  // await promise;
+
+  return new Promise((r) => setTimeout(r, 200));
 }
 
 async function main() {
